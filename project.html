@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./project.css">
+    <title>ADELA</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="logo">
+                <span>AIRBUS</span>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="overlay"></div>
+            <span class="project">ADELA</span>
+            <div id="circle">
+                <div class="feature one">
+                    <span>Test</span>
+                    <div class="details">
+                        <h1>Title</h1>
+                        <p>Flip plugin lets you seamlessly transition between two states even 
+                            if there are sweeping changes to the structure of the DOM like re-parenting of elements </p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <span>Test</span>
+                    <div class="details">
+                        <h1>Title</h1>
+                        <p>Flip plugin lets you seamlessly transition between two states even 
+                            if there are sweeping changes to the structure of the DOM like re-parenting of elements </p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <span>Test</span>
+                    <div class="details">
+                        <h1>Title</h1>
+                        <p>Flip plugin lets you seamlessly transition between two states even 
+                            if there are sweeping changes to the structure of the DOM like re-parenting of elements </p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <span>Test</span>
+                    <div class="details">
+                        <h1>Title</h1>
+                        <p>Flip plugin lets you seamlessly transition between two states even 
+                            if there are sweeping changes to the structure of the DOM like re-parenting of elements </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <span id="upper">upper</span>
+            <h3>Features</h3>
+            <span id="lower">lower</span>
+        </div>
+    </div>
+
+
+
+    <script>
+        var circle = document.getElementById('circle');
+        var lower = document.getElementById('lower');
+        var upper = document.getElementById('upper');
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upper.onclick = function () {
+            rotateSum = rotateValue + 'rotate(-90deg)';
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        lower.onclick = function () {
+            rotateSum = rotateValue + 'rotate(90deg)';
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>

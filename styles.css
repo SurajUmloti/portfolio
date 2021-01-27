@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 100;
+}
+
+header .logo img {
+    max-width: 150px;
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 8px;
+}
+
+.menu li a {
+    color: #fff;
+}
+
+.menu li a:hover {
+    color: #f17557;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.content {
+    z-index: 1;
+    max-width: 550px;
+}
+
+.content h1 {
+    font-size: 50px;
+    font-family: monospace;
+    color: whitesmoke;
+}
+
+.content p {
+    color: whitesmoke;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+.buttons {
+    padding: 16px 0;
+}
+
+.buttons a {
+    padding: 8px 16px;
+    background-color: #f175571f;
+    box-shadow: 0px 0px 2px #f17557, 0px 0px 2px #eee;
+    color: white;
+}
+
+.buttons a:hover {
+    background-color: #f17557;
+}
+
+a i {
+    margin: 0 4px;
+}
+
+.projects {
+    position: absolute;
+    bottom: 30px;
+}
+
+.projects-button a {
+    color: #f17557;
+    font-size: 24px;
+}
+.projects-button i{
+    padding: 20px;
+    font-size: 24px;
+    border: 1px solid #f17557;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #fff, 0px 0px 5px #f17557;
+    margin-right: 16px;
+}
+
+.fa-external-link-square:before {
+    color: #f17557;
+}
+
+
+.cards-container {
+    background-color: #cbe6f5;
+    color: #626262;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.cards-container .container {
+    display: flex;
+    width: 100%;
+    padding: 0 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cards-container h1 {
+    background: #b1b1b1;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255, 255, 255, 0.5) 1px 2px 1px;
+    font-size: 40px;
+    padding: 30px;
+    padding-bottom: 0;
+}
+.card {
+    height: 350px;
+    width: 300px;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.05),
+    -5px -5px 5px rgba(255, 255, 255, 0.5);
+    margin: 30px;
+    cursor: pointer;
+}
+
+.card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #acd9ec2e;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card:hover .box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #b95ce4,#4f29cd);
+}
+
+.card .box .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.box .content h2 {
+    position: relative;
+    /* top: -10px;
+    right: 10px; */
+    font-size: 7em;
+    color: rgba(0, 0, 0, 0.02);
+    transition: 0.5s;
+}
+
+.card:hover .box .content h2 {
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.card:hover .box .content h3, .card:hover .box .content p {
+    color: #fff
+}
+
+.box .content h3 {
+    font-size: 1.8em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.box .content p {
+    font-size: 1em;
+    color: #777;
+    z-index: 1;
+    font-weight: 300;
+    transition: 0.5s;
+}
+
+
+.box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #03a9f4;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.card:hover .box .content a {
+    background-color: #ff568f;
+}
+
+.parallax {
+    background: url(images/beluga.jpg) repeat fixed 100%;
+    opacity: .5;
+}
+
+.parallax .parallax-inner {
+    padding: 10%;
+    font-size: 140px;
+    letter-spacing: 50px;
+    text-align: center;
+    color: #cbe6f5;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #021119, 0px 0px 5px #03a9f4;
+}
+
+.projects-container {
+    background-color: #1b1f23;
+    padding: 0 100px;
+}
+
+.projects-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .project {
+    position: relative;
+  }
+  
+  .project-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 315px;
+    width: 100%;
+    transition: 1s;
+    border-radius: 15px;
+    box-shadow: 0 0px 10px #2f4c6c, 0px 0px 5px #2f4c6c;
+  }
+
+  
+.project-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    /* padding-left: 100px;
+    padding-right: 100px; */
+  }
+
+  .project-name  {
+    transition: 1s;
+    transform: translateY(25px);
+  }
+  .project:hover .project-wrapper .project-name {
+      transform: translateY(0px);
+  }
+  
+.project-wrapper .project-description {
+    transition: 1s;
+    color: transparent;
+    padding: 0 30px;
+  }
+
+  .project:hover .project-image {
+    transition: 1s;
+    filter: brightness(10%);
+  }
+  
+
+  .project-wrapper:hover .project-description {
+    color: lightseagreen;
+    font-weight: 600;
+  }
+  
+  .project-name img {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .project-name {
+      padding: 0 30px;
+  }
+
+  .project-name span {
+      font-size: 3em;
+      font-weight: bold;
+      color: aliceblue;
+  }
+  
+  .two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .card.project {
+      box-shadow: -4px -2px 4px 0px #262830, 4px 2px 6px 0px #0e1013;
+  }
